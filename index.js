@@ -2,13 +2,9 @@ const express = require('express');
 const path = require('path'); 
 const app =express();
 const members = require('./members'); 
+const logger = require('./middleware/logger')
 const PORT = process.env.PORT || 5000;
-
-const logger=(req,res, next)=>{
-  console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}`);
-  next()
-}
-
+ 
 app.use(logger) 
 
 
