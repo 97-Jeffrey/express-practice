@@ -16,4 +16,11 @@ router.get('/:id', (req, res) => {
     res.status(400).json({ msg: 'member not found'});
   }
 })
+
+//create members:
+router.post('/',(req,res)=>{
+  const newMember={
+    
+  }
+})
 module.exports =router;
